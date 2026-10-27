@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+# Standard naming:
+.venv/
+venv/
+ENV/
+env/
+
+# Root-level virtualenv (created when running `python -m venv .` in the project root)
+bin/
+lib/
+lib64
+include/
+pyvenv.cfg
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Editor / IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Logs & temp files
+*.log

@@ -1,0 +1,16 @@
+const long long INF = LLONG_MAX / 4;
+    vector<long long> dp(n + 1, INF);
+    dp[0] = 0;
+    for (int i = 1; i <= n; i++) {
+        long long current_max = 0;
+        int mask = 0;
+        for (int j = i; j >= 1 && (i - j + 1) <= K; j--) {
+            int char_bit = 1 << (S[j - 1] - 'a');
+            if (mask & char_bit) break;
+            mask |= char_bit;
+            current_max = max(current_max, w[j - 1]);
+            if (dp[j - 1] != INF)
+                dp[i] = min(dp[i], dp[j - 1] + current_max);
+        }
+    }
+    return dp[n];
